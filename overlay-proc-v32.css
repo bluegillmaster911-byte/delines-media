@@ -1,0 +1,179 @@
+@keyframes d-swipe-nudge {
+  0%, 68%, 100% { transform: translateY(-50%) translateX(0); }
+  78% { transform: translateY(-50%) translateX(6px); }
+}
+main > section.container-page:first-of-type {
+  position: relative !important;
+  isolation: isolate;
+  overflow: hidden !important;
+  background: #120c08 !important;
+  padding-top: 3.2rem !important;
+  padding-bottom: 3.6rem !important;
+}
+main > section.container-page:first-of-type::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: url("https://cdn.jsdelivr.net/gh/bluegillmaster911-byte/delines-media@master/tomahawk.jpg") center 28% / cover no-repeat;
+  pointer-events: none;
+}
+main > section.container-page:first-of-type::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(105deg, rgba(10,8,6,.78) 0%, rgba(10,8,6,.4) 55%, rgba(10,8,6,.22) 100%);
+  pointer-events: none;
+}
+main > section.container-page:first-of-type > * { position: relative; z-index: 1; }
+main > section.container-page:first-of-type h1,
+main > section.container-page:first-of-type h2 { color: #F4F1EA !important; text-shadow: 0 2px 18px rgba(0,0,0,.4); }
+main > section.container-page:first-of-type > p { color: rgba(244,241,234,.88) !important; }
+main > section.container-page:first-of-type .card,
+main > section.container-page:first-of-type a.card {
+  background: rgba(255,252,247,.12) !important;
+  border: 1px solid rgba(255,255,255,.22) !important;
+  backdrop-filter: blur(16px) saturate(1.1);
+  -webkit-backdrop-filter: blur(16px) saturate(1.1);
+  color: #F4F1EA !important;
+}
+main > section.container-page:first-of-type .card h2,
+main > section.container-page:first-of-type a.card h2 { color: #F4F1EA !important; }
+main > section.container-page:first-of-type .card p,
+main > section.container-page:first-of-type a.card p { color: rgba(244,241,234,.82) !important; }
+main > section.container-page:first-of-type a.card {
+  cursor: pointer;
+  text-decoration: none !important;
+}
+main > section.container-page:first-of-type a.card[href="/order"] p.text-xs.font-bold,
+main > section.container-page:first-of-type a.card[href="/drop-off"] p.text-xs.font-bold {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 1.05rem !important;
+  padding: 0.58rem 1.05rem !important;
+  border-radius: 999px !important;
+  background: linear-gradient(180deg, #e8d6aa, #c4a35a) !important;
+  color: #1a1408 !important;
+  letter-spacing: 0.12em !important;
+  box-shadow: 0 6px 16px rgba(0,0,0,.28);
+  text-decoration: none !important;
+}
+
+main::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: min(72vh, 44rem);
+  background: url("https://cdn.jsdelivr.net/gh/bluegillmaster911-byte/delines-media@master/tomahawk.jpg") center 38% / cover no-repeat;
+  box-shadow: inset 0 24px 40px rgba(0,0,0,.28);
+}
+
+#inquiry .snap-x,
+.snap-x {
+  scroll-snap-type: x mandatory !important;
+  gap: 0.7rem !important;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+  overscroll-behavior-x: contain;
+}
+#inquiry .snap-x > .snap-start,
+.snap-x > .snap-start {
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  scroll-snap-align: start !important;
+  scroll-snap-stop: always !important;
+}
+#inquiry .snap-x button.group,
+.snap-x button.group {
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+}
+#inquiry .snap-x button.group .aspect-\[4\/3\],
+.snap-x button.group .aspect-\[4\/3\] {
+  aspect-ratio: 4 / 3 !important;
+  min-height: 12.5rem;
+  max-height: 42vh;
+  background: #0c1611 !important;
+}
+#inquiry .snap-x button.group img,
+.snap-x button.group img {
+  object-fit: contain !important;
+  object-position: center center !important;
+}
+#inquiry .snap-x button.group .aspect-\[4\/3\]::after,
+.snap-x button.group .aspect-\[4\/3\]::after {
+  content: "›";
+  position: absolute;
+  right: 0.7rem;
+  top: 50%;
+  z-index: 4;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 999px;
+  background: rgba(8,18,14,.55);
+  border: 1.5px solid rgba(255,255,255,.78);
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 2.1rem;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,.35);
+  pointer-events: none;
+  transform: translateY(-50%);
+  animation: d-swipe-nudge 2.4s ease-in-out infinite;
+}
+#inquiry .snap-start.d-last-species .aspect-\[4\/3\]::after,
+.snap-start.d-last-species .aspect-\[4\/3\]::after { display: none !important; }
+
+#inquiry img[alt*="Whitetail"],
+#inquiry img[alt*="whitetail"],
+#inquiry img[alt*="Bear"],
+#inquiry img[alt*="bear"],
+#inquiry img[alt*="Mule"],
+#inquiry img[alt*="mule"],
+#inquiry img[alt*="Elk"],
+#inquiry img[alt*="elk"],
+#inquiry img[alt*="Moose"],
+#inquiry img[alt*="moose"],
+#inquiry img[alt*="Stag"],
+#inquiry img[alt*="stag"],
+#inquiry img[alt*="Hog"],
+#inquiry img[alt*="hog"],
+#inquiry img[alt*="Boar"],
+#inquiry img[alt*="boar"],
+#inquiry img[alt*="Turkey"],
+#inquiry img[alt*="turkey"],
+#inquiry img[alt*="Axis"],
+#inquiry img[alt*="axis"],
+#inquiry img[alt*="Corsican"],
+#inquiry img[alt*="corsican"],
+.snap-x img[alt*="Whitetail"],
+.snap-x img[alt*="whitetail"],
+.snap-x img[alt*="Bear"],
+.snap-x img[alt*="bear"],
+.snap-x img[alt*="Mule"],
+.snap-x img[alt*="mule"],
+.snap-x img[alt*="Elk"],
+.snap-x img[alt*="elk"],
+.snap-x img[alt*="Moose"],
+.snap-x img[alt*="moose"],
+.snap-x img[alt*="Stag"],
+.snap-x img[alt*="stag"],
+.snap-x img[alt*="Hog"],
+.snap-x img[alt*="hog"],
+.snap-x img[alt*="Boar"],
+.snap-x img[alt*="boar"],
+.snap-x img[alt*="Turkey"],
+.snap-x img[alt*="turkey"],
+.snap-x img[alt*="Axis"],
+.snap-x img[alt*="axis"],
+.snap-x img[alt*="Corsican"],
+.snap-x img[alt*="corsican"] {
+  object-fit: contain !important;
+  object-position: center center !important;
+}
